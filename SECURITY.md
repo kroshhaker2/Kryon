@@ -1,14 +1,10 @@
 # Security Policy
 
-## Supported Versions
+Kryon is currently under development and has no supported stable releases.
 
-We generally only fully support the latest version, the same applies to exploits such as server crashes and item
-duplication bugs. In the transition period during larger Minecraft updates, we may still backport important fixes to the
-last minor or major release.
+Please report security vulnerabilities privately through
+[GitHub Security Advisories](https://github.com/kroshhaker2/Kryon/security/advisories/new).
+Do not disclose vulnerabilities in public issues.
 
-## Reporting a Vulnerability
-
-For any issues that are NOT duplication bugs, server/client crashes, or otherwise serious exploits, please open an issue
-through the [Issues tab](https://github.com/PaperMC/Paper/issues).
-For exploits, please [join our Discord](https://discord.gg/papermc) and see the [#paper-exploit-report channel](https://discord.com/channels/289587909051416579/1208749386348101682) for
-further instructions.
+If the vulnerability also affects Paper, report it according to
+[Paper's security policy](https://github.com/PaperMC/Paper/security/policy).
