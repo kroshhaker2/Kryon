@@ -13,23 +13,20 @@ if (!file(".git").exists()) {
     val errorText = """
 
         =====================[ ERROR ]=====================
-         The Paper project directory is not a properly cloned Git repository.
+         The Kryon project directory is not a properly cloned Git repository.
 
-         In order to build Paper from source you must clone
-         the Paper repository using Git, not download a code
+         In order to build Kryon from source you must clone
+         the Kryon repository using Git, not download a code
          zip from GitHub.
 
-         Built Paper jars are available for download at
-         https://papermc.io/downloads/paper
-
-         See https://github.com/PaperMC/Paper/blob/main/CONTRIBUTING.md
-         for further information on building and modifying Paper.
+         See https://github.com/kroshhaker2/Kryon/blob/main/CONTRIBUTING.md
+         for further information on building and modifying Kryon.
         ===================================================
     """.trimIndent()
     error(errorText)
 }
 
-rootProject.name = "paper"
+rootProject.name = "kryon"
 
 for (name in listOf("paper-api", "paper-server")) {
     include(name)

@@ -1,5 +1,6 @@
 .gradle/
 build/
+.direnv
 
 # Eclipse stuff
 .classpath
@@ -21,6 +22,7 @@ bin/
 dist/
 manifest.mf
 __pycache__/
+target
 
 # Mac filesystem dust
 .DS_Store/

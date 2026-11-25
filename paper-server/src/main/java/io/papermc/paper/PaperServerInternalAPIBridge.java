@@ -1,7 +1,7 @@
 package io.papermc.paper;
 
 import com.destroystokyo.paper.PaperSkinParts;
-import com.destroystokyo.paper.PaperVersionFetcher;
+import com.destroystokyo.paper.KryonVersionFetcher;
 import com.destroystokyo.paper.SkinParts;
 import com.destroystokyo.paper.util.VersionFetcher;
 import com.google.common.base.Preconditions;
@@ -203,7 +203,7 @@ public class PaperServerInternalAPIBridge implements InternalAPIBridge {
 
     @Override
     public VersionFetcher getVersionFetcher() {
-        return new PaperVersionFetcher();
+        return new KryonVersionFetcher();
     }
 
     @Override

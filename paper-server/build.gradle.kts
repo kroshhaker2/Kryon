@@ -168,6 +168,7 @@ dependencies {
 }
 
 tasks.jar {
+    archiveBaseName.set("kryon")
     manifest {
         val git = Git(rootProject.layout.projectDirectory.path)
         val mcVersion = rootProject.providers.gradleProperty("mcVersion").get()
@@ -179,14 +180,14 @@ tasks.jar {
         val gitBranch = git.exec(providers, "rev-parse", "--abbrev-ref", "HEAD").get().trim()
         attributes(
             "Main-Class" to "org.bukkit.craftbukkit.Main",
-            "Implementation-Title" to "Paper",
+            "Implementation-Title" to "Kryon",
             "Implementation-Version" to implementationVersion,
             "Implementation-Vendor" to date,
-            "Specification-Title" to "Paper",
+            "Specification-Title" to "Kryon",
             "Specification-Version" to project.version,
-            "Specification-Vendor" to "Paper Team",
-            "Brand-Id" to "papermc:paper",
-            "Brand-Name" to "Paper",
+            "Specification-Vendor" to "Kryon Team",
+            "Brand-Id" to "kryon:kryon",
+            "Brand-Name" to "Kryon",
             "Build-Number" to (build ?: ""),
             "Build-Time" to buildTime.toString(),
             "Git-Branch" to gitBranch,
@@ -346,8 +347,12 @@ tasks.registerRunTask("runPaperclip") {
     mainClass.set(null as String?)
 }
 
+tasks.createPaperclipJar {
+    outputZip.set(layout.buildDirectory.file("libs/kryon-paperclip-${project.version}.jar"))
+}
+
 fill {
-    project("paper")
+    project("kryon")
     versionFamily(paperweight.minecraftVersion.map { it.split(".", "-").takeWhile { part -> part.toIntOrNull() != null }.take(2).joinToString(".") })
     version(paperweight.minecraftVersion)
 
