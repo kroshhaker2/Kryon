@@ -7,7 +7,7 @@ mod worldgen;
 
 #[unsafe(no_mangle)]
 pub extern "C" fn kryon_native_version() -> u32 {
-    1
+    2
 }
 
 #[unsafe(no_mangle)]
@@ -32,11 +32,7 @@ pub extern "C" fn kryon_generator_create(
         return std::ptr::null_mut();
     };
 
-    Box::into_raw(Box::new(WorldGenerator {
-        seed,
-        dimension,
-        block_states,
-    }))
+    Box::into_raw(Box::new(WorldGenerator::new(seed, dimension, block_states)))
 }
 
 #[unsafe(no_mangle)]
